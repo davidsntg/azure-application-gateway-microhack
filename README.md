@@ -2,7 +2,7 @@
 
 # Introduction
 
-[Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) is a managed regional reverse proxy with optional WAF (Web Application Firewall) capibility used to expose web applications:
+[Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) is a managed regional reverse proxy with optional WAF (Web Application Firewall) capability used to expose web applications:
 
 ![image](docs/appgw-1.png)
 
