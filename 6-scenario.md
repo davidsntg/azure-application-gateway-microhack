@@ -142,3 +142,6 @@ You should now be more familiar with usage of backend servers with self-signed c
 In a corporate context, **it would have been necessary to import an intermediate or root certificate to Application Gateway** to avoid importing per-application certificates.
 
 By combining this scenario with Scenario #4, it is possible to achieve End-to-end TLS.
+
+
+### [>> GO TO SCENARIO #7](https://github.com/dawlysd/azure-application-gateway-microhack/blob/main/7-scenario.md)
