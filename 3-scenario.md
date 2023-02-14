@@ -64,20 +64,21 @@ In addition, **associate** `AppGwPublic-WafPolicy_Default` WAF policy to `AppGwP
 
 ## Task 4: Check it works
 
-1) Navigate to http://108.142.153.65.nip.io/?query=x"%20or%201%3D1%20--"
+1) Navigate to [http://108.142.153.65.nip.io/?query=x"%20or%201%3D1%20--"](http://108.142.153.65.nip.io/?query=x"%20or%201%3D1%20--")
 
 Expected result: 
 ![image](docs/scenario3-result-hub.png)
-`AppGw-WafPolicy-app1` is blocking us as it is configured in **Detection mode**.
 
-2) Navigate to http://app1-108.142.153.65.nip.io/?query=x"%20or%201%3D1%20--"
+`WafPolicy_Default` is not blocking us as it is configured in **Detection mode**.
+
+2) Navigate to [http://app1-108.142.153.65.nip.io/?query=x"%20or%201%3D1%20--"](http://app1-108.142.153.65.nip.io/?query=x"%20or%201%3D1%20--")
 
 Expected result: 
 ![image](docs/scenario3-result-app1.png)
 
 `AppGw-WafPolicy-app1` is blocking us as it is configured in **Prevention mode**.
 
-3) Navigate to http://app2-108.142.153.65.nip.io/?query=x"%20or%201%3D1%20--"
+3) Navigate to [http://app2-108.142.153.65.nip.io/?query=x"%20or%201%3D1%20--"](http://app2-108.142.153.65.nip.io/?query=x"%20or%201%3D1%20--")
 
 Expected result: 
 ![image](docs/scenario3-result-app2.png)
