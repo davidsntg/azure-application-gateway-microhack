@@ -39,7 +39,7 @@ Keep `BackendPool-app1` created previously on scenario #1:
 * Set "Host type" to Single
 * Set "Host name" to `app2-108.142.153.65.nip.io`
 
-![image](docs/scenario2-listeners-app1.png)
+![image](docs/scenario2-listeners-app2.png)
 
 **Create** `Listener-Public-Http_hub`:
 * Set "Listener type" to Basic
