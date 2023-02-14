@@ -85,6 +85,8 @@ Expected result:
 
 `AppGw-WafPolicy-app2` is blocking us as it is configured in **Prevention mode**.
 
+> **Note**: Custom error page [can be configured](https://learn.microsoft.com/en-us/azure/application-gateway/custom-error).
+
 ## Task 5: Monitor WAF
 
 [Enabling logging](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/web-application-firewall-logs#enable-logging-through-the-azure-portal) for Application Gateway allows to query logs and displays when WAF matches a rule:
