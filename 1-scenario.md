@@ -12,6 +12,8 @@ Let's expose this private webserver on to the Internet through Application Gatew
 
 ![image](docs/scenario1.gif)
 
+> In this MicroHack, Application Gateway will have a single public IP address. 
+
 ## Task 1: Understand Application Gateway components model
 
 To distribute traffic, an Application Gateway uses several components :
@@ -24,7 +26,7 @@ During the infrastructure deployment, some of these components were already conf
 
 ## Task 2: Review Frontend IP configurations
 
-> Frontend IP configurations defines the IP address used by Application Gateway to receive incoming HTTP(S) requests.
+> Frontend IP configurations define the IP address used by Application Gateway to receive incoming HTTP(S) requests.
 >
 > Application Gateway can have at most one public ip and one private ip configured, no more.
 
@@ -39,7 +41,7 @@ At this scenario #1 step, **only the Public Frontend IP is configured**:
 
 ## Task 3: Review Listeners
 
-> Listeners listen for requests received on the Frontend IP they are associated with, on a specific port and protocol. There is [two types of listeners](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-components#types-of-listeners):
+> Listeners listen for requests received on the Frontend IP they are associated with, on a specific port and protocol. There are [two types of listeners](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-components#types-of-listeners):
 > * Basic listener: process all requests hitting the associated Frontend IP and matching their configured port and protocol
 > * Multi-site listeners: process all requests hitting the associated Frontend IP and matching their configured port and protocol and **hostname**.
 
@@ -49,11 +51,11 @@ Navigate to AppGwPublic => Settings => Listeners:
 
 ![image](docs/scenario1-listeners-2.png)
 
-All requests hittings the FrontendIP Public on HTTP:80 will be routed by `RoutingRule_app1` routing rule.
+All requests hitting the FrontendIP Public on HTTP:80 will be routed by `RoutingRule_app1` routing rule.
 
 ## Task 4: Review Routing Rules
 
-> Routing Rules forwards requests processed by a Listener to the backends or redirects it elsewhere. There are [two types of Routing Rules](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-components#request-routing-rules):
+> Routing Rules forward requests processed by a Listener to the backends or redirects them elsewhere. There are [two types of Routing Rules](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-components#request-routing-rules):
 > * Basic: all requests are forwarded to the associated backend pool 
 > * Path-based: route the requests to a specific backend pool based on the URL in the request
 
@@ -85,7 +87,7 @@ Navigate to AppGwPublic => Settings => Backend pools:
 
 ## Task 6: Review Backend settings
 
-> Backend settings defines how to connect to backend pool instances to forward requests: Backend protocol, Backend port, Session-affinity, Connection draining, Custom probe, ...
+> Backend settings define how to connect to backend pool instances to forward requests: Backend protocol, Backend port, Session-affinity, Connection draining, Custom probe, ...
 
 Navigate to AppGwPublic => Settings => Backend settings:
 
@@ -111,4 +113,3 @@ Let's now expose multiple websites with Scenario #2.
 ### [>> GO TO SCENARIO #2](https://github.com/dawlysd/azure-application-gateway-microhack/blob/main/2-scenario.md)
 
 
-TODO: expliquer que dans le cadre du microhack on travaille uniquement avec une frontendip publique mais qu'on peut tout faire en privé aussi
