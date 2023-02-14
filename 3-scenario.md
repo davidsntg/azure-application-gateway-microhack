@@ -10,7 +10,7 @@ When a WAF policy is created, it must be associated to an application gateway to
 
 ## Overview
 
-Let's create one Waf Policy per Listeners:
+Let's create one Waf Policy per Listener:
 
 ![image](docs/scenario3-overview.png)
 
@@ -99,7 +99,7 @@ Expected result:
 
 You should now be more familial with [**Global WAF policy**](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/policy-overview#global-waf-policy) and [**Per-site WAF policy**](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/policy-overview#per-site-waf-policy). It is also possible to configure [Per-URI policy](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/policy-overview#per-uri-policy).
 
-If you deploy Application Gateway in production, mmake sur you follow [good practices](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/best-practices).
+If you deploy Application Gateway in production, make sur you follow [best practices](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/best-practices).
 
 Let's now inspect network traffic between Application Gateway and VMs, with Azure Firewall.
 
