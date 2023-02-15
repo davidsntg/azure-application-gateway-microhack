@@ -35,6 +35,10 @@ resource "azurerm_linux_virtual_machine" "hub-vm" {
     sku       = var.vm_os_sku
     version   = var.vm_os_version
   }
+  
+  boot_diagnostics {
+    
+  }
 }
 
 
@@ -75,6 +79,10 @@ resource "azurerm_linux_virtual_machine" "app1-vm" {
     sku       = var.vm_os_sku
     version   = var.vm_os_version
   }
+  
+  boot_diagnostics {
+    
+  }
 }
 
 # App2 VM
@@ -113,5 +121,9 @@ resource "azurerm_linux_virtual_machine" "app2-vm" {
     offer     = var.vm_os_offer
     sku       = var.vm_os_sku
     version   = var.vm_os_version
+  }
+  
+  boot_diagnostics {
+    
   }
 }
